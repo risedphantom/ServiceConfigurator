@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>IIS Restrictions management</title>
+        <link href="/Content/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/Content/css/dashboard.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Service Configurator</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul id="sidebarUl" class="nav nav-sidebar">
+                        <li>
+                            <a href="/iis/activeRestrictions" id="activeRestrictionsLink">Active restrictions</a>
+                        </li>
+                        <li>
+                            <a href="/iis/waitingRestrictions">Waiting restrictions</a>
+                        </li>
+                        <li>
+                            <a href="/iis/failedRestrictions">Failed restrictions</a>
+                        </li>
+                        <li>
+                            <a href="/iis/sites">Sites</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="content">
+                </div>
+            </div>    
+        </div>
+        <script src="/Content/js/jquery.min.js"></script>
+        <script src="/Content/js/bootstrap.min.js"></script>
+        <script src="/Content/js/layout.js"></script>
+    </body>
+</html>

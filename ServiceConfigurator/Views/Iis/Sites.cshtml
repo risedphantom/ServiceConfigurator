@@ -1,0 +1,51 @@
+﻿<link href="/Content/css/bootstrap-table.min.css" rel="stylesheet">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Sites</h1>
+    <div class="table-responsive">
+        <table id="sites" data-toggle="table" data-url="/api/rest/iis/sites" data-show-refresh="true" class="table table-striped">
+            <thead>
+                <tr>
+                    <th data-field="Hostname" data-sortable="true">Host</th>
+                    <th data-field="Sitename" data-sortable="true">Site</th>
+                    <th data-field="Group" data-sortable="true">Group</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-site-modal">Add site</button>
+    </div>
+    <div class="modal fade" id="add-site-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add new site</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="site">
+                        <div class="form-group">
+                            <label for="Sitename" class="control-label">Name:</label>
+                            <input type="text" class="form-control" name="Sitename" id="Sitename">
+                        </div>
+                        <div class="form-group">
+                            <label for="Hostname" class="control-label">Host:</label>
+                            <input type="text" class="form-control" name="Hostname" id="Hostname">
+                        </div>
+                        <div class="form-group">
+                            <label for="Group" class="control-label">Group:</label>
+                            <input type="text" class="form-control" name="Group" id="Group">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="submit">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Content/js/bootstrap-table.min.js"></script>
+<script src="/Content/js/sites.js"></script>

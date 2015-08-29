@@ -1,0 +1,1 @@
+﻿CREATE LOGIN [ServiceConfigurator] WITH PASSWORD = 'dfsraFE$D#AS'

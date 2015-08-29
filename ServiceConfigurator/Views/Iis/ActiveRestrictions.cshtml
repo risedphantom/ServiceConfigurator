@@ -1,0 +1,19 @@
+﻿<link href="/Content/css/bootstrap-table.min.css" rel="stylesheet">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Active restrictions</h1>
+    <div class="table-responsive">
+        <table data-toggle="table" data-url="/api/rest/iis/activeRestrictionsPlain" data-show-refresh="true" class="table table-striped">
+            <thead>
+                <tr>
+                    <th data-field="Type" data-sortable="true">Type</th>
+                    <th data-field="Hostname" data-sortable="true">Host</th>
+                    <th data-field="Sitename" data-sortable="true">Site</th>
+                    <th data-field="StartMoment" data-sortable="true">From</th>
+                    <th data-field="StopMoment" data-sortable="true">To</th>
+                    <th data-field="Rule" data-formatter="xmlFormatter">Rule</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<script src="/Content/js/bootstrap-table.min.js"></script>

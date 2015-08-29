@@ -1,0 +1,105 @@
+﻿<link href="/Content/css/bootstrap-table.min.css" rel="stylesheet">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Waiting restrictions</h1>
+    <div class="table-responsive">
+        <table id="restrictions" data-toggle="table" data-url="/api/rest/iis/waitingRestrictionsPlain" data-show-refresh="true" class="table table-striped">
+            <thead>
+                <tr>
+                    <th data-field="Type" data-sortable="true">Type</th>
+                    <th data-field="Hostname" data-sortable="true">Host</th>
+                    <th data-field="Sitename" data-sortable="true">Site</th>
+                    <th data-field="StartMoment" data-sortable="true">From</th>
+                    <th data-field="StopMoment" data-sortable="true">To</th>
+                    <th data-field="Rule" data-formatter="xmlFormatter">Rule</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-restriction-modal">Add restriction</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-group-restriction-modal">Add group restriction</button>
+    </div>
+    <div class="modal fade" id="add-restriction-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add new restriction</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="Sitename" class="control-label">Name:</label>
+                            <input type="text" class="form-control" id="Sitename">
+                        </div>
+                        <div class="form-group">
+                            <label for="Hostname" class="control-label">Host:</label>
+                            <input type="text" class="form-control" id="Hostname">
+                        </div>
+                        <div class="form-group">
+                            <label for="st_Type" class="control-label">Type:</label>
+                            <input type="text" class="form-control" id="st_Type">
+                        </div>
+                        <div class="form-group">
+                            <label for="st_Rule" class="control-label">Rule:</label>
+                            <input type="text" class="form-control" id="st_Rule">
+                        </div>
+                        <div class="form-group">
+                            <label for="st_StartMoment" class="control-label">Start Moment:</label>
+                            <input type="datetime-local" class="form-control" id="st_StartMoment">
+                        </div>
+                        <div class="form-group">
+                            <label for="st_StopMoment" class="control-label">Stop Moment:</label>
+                            <input type="datetime-local" class="form-control" id="st_StopMoment">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="submitSingle">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add-group-restriction-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add new group restriction</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="Group" class="control-label">Group:</label>
+                            <input type="text" class="form-control" id="Group">
+                        </div>
+                        <div class="form-group">
+                            <label for="gr_Type" class="control-label">Type:</label>
+                            <input type="text" class="form-control" id="gr_Type">
+                        </div>
+                        <div class="form-group">
+                            <label for="gr_Rule" class="control-label">Rule:</label>
+                            <input type="text" class="form-control" id="gr_Rule">
+                        </div>
+                        <div class="form-group">
+                            <label for="gr_StartMoment" class="control-label">Start Moment:</label>
+                            <input type="datetime-local" class="form-control" id="gr_StartMoment">
+                        </div>
+                        <div class="form-group">
+                            <label for="gr_StopMoment" class="control-label">Stop Moment:</label>
+                            <input type="datetime-local" class="form-control" id="gr_StopMoment">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="submitGroup">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Content/js/bootstrap-table.min.js"></script>
+<script src="/Content/js/waiting-restrictions.js"></script>
